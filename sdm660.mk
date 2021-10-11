@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Board
+# Product
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := sdm660
 TARGET_BOARD_PLATFORM := sdm660
