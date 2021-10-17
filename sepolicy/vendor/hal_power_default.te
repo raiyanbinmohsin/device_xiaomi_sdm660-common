@@ -13,5 +13,11 @@ allow hal_power_default self:capability { kill sys_admin };
 r_dir_file(hal_power_default, sysfs_graphics)
 set_prop(hal_power_default, vendor_power_prop)
 
+typeattribute hal_power_default mlstrustedsubject;
+
+# Set scheduling info for apps (for adpf)
+allow hal_power_default appdomain:process { getsched setsched };
+allow hal_power_default self:capability sys_nice;
+
 # Set scheduling info for system_server (for adpf)
 allow hal_power_default system_server:process setsched;
