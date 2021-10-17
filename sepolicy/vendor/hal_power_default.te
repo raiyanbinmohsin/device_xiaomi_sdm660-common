@@ -12,3 +12,6 @@ allow hal_power_default self:capability { kill sys_admin };
 
 r_dir_file(hal_power_default, sysfs_graphics)
 set_prop(hal_power_default, vendor_power_prop)
+
+# Set scheduling info for system_server (for adpf)
+allow hal_power_default system_server:process setsched;
